@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Automation Testing" thread-count="5" parallel="tests">
+<listeners>
+<listener class-name="com.qa.utility.Reports"></listener>
+</listeners>
+ <test thread-count="5" name="Functional Testing" parallel="classes">
+<parameter name="Browser" value="https://www.google.com/"></parameter>
+ <parameter name="Url" value="https://www.flipkart.com/"></parameter>
+    <classes>
+      <class name="com.qa.testscript.EndToEndFlow"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
